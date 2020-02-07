@@ -27,17 +27,17 @@
 			margin:10% auto;
         }
 		.title {
-            color: rgba(40, 40, 40, 1);
 			text-align: center;
 			font-size: 3.5rem;
 			font-weight: bold;
+			margin-bottom: 30px;
 		}
 
 		.subtitle {
 			text-align: center;
 			font-size: 1.25rem;
 			font-weight: 300;
-            margin-top: 30px;
+            
 		}
 
 	</style>
@@ -46,13 +46,24 @@
 <body>
 
     <div class=cont">
+		<form name="form" method="post">
         <div class="title">
-			.
+			<a class="title" onclick="func('subtitle')"> 예니짱</a>
 		</div>
-		<div class="subtitle">
-			금요일이라 많이 힘들지? 좀만 더 힘내구 곧 보장! 사랑해 😘
+		<div id="subtitle" style="display: none;">
+			금요일이라 힘들지? 좀만 더 힘내구 곧 보장! 사랑해 😘
 		</div>
+		</form>
 
+		<script>
+        
+			function func(idMyDiv){
+			var objDiv = document.getElementById(idMyDiv);
+			if(objDiv.style.display=="block"){ objDiv.style.display = "none"; }
+			else{ objDiv.style.display = "block"; }
+			}
+			
+		</script>
     </div>
 		
 		<script src="script.js">
